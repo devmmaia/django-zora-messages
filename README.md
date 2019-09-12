@@ -10,13 +10,13 @@ Detailed documentation is in the "docs" directory.
 
 1. Add "django_zora_messages" to your INSTALLED_APPS setting like this:
 ```python
-		INSTALLED_APPS = [
+    INSTALLED_APPS = [
 
-		'...',
+    '...',
 
-		'django_zora_messages',
+    'django_zora_messages',
 
-		]
+    ]
 ```
   
   
