@@ -1,7 +1,6 @@
 
 from django.db import models
 
-# Create your models here.
 
 class Message(models.Model):
     """ Describes every available language a massage was translated """
@@ -15,7 +14,7 @@ class Message(models.Model):
     @property
     def locations(self):
         return list({loc.location for loc in 
-        MessageLocation.objects.filter(key=self.key)})
+                    MessageLocation.objects.filter(key=self.key)})
 
     def __str__(self):
         return self.value
@@ -31,5 +30,3 @@ class MessageLocation(models.Model):
 
     class Meta:
         unique_together = ('key', 'location',)
-
-

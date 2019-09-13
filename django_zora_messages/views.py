@@ -1,7 +1,8 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from .utils import get_message as msg
 from django.http import HttpResponse
 # Create your views here.
+
 
 def index(request):
     welcome_message = msg("welcome.msg")
