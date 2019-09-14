@@ -23,6 +23,11 @@ def get_message(key, *args, **kwargs):
     return __format_message(message, *args, **kwargs)
 
 
+def cache_clear():
+    """ clear the cached messages """
+    __get_or_empty_message.cache_clear()
+
+
 @lru_cache(maxsize=3000)
 def __get_or_empty_message(key, language_):
     try:
